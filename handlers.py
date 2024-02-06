@@ -9,8 +9,3 @@ router = Router()
 async def start_handler(msg: Message):
     await msg.answer("Привет! Это магазин POIZON. Ты можешь открыть наше приложение, чтобы посмотреть товары.",
                      reply_markup=keyboards.inline_kb_website)
-
-
-@router.message()
-async def message_handler(msg: Message):
-    await msg.answer(f"Твой ID: {msg.from_user.id}")
